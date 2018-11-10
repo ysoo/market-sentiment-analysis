@@ -9,7 +9,8 @@ exports.reset = function () {
         
         CREATE TABLE IF NOT EXISTS company (
             id serial unique primary key,
-            name varchar(255)
+            name text,
+            code varchar(255)
         );
         CREATE TABLE IF NOT EXISTS company_articles_news (
             id serial unique primary key,
