@@ -1,6 +1,6 @@
 var express = require("express");
 var app = express();
-const reset = require('./db/schema.js');
+const reset = require('./server/db/schema.js');
 
 reset();
 
