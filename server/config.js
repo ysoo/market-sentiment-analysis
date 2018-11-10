@@ -1,7 +1,7 @@
 const url = require('url');
 
-if (process.env.DATABASE_URL) {
-    const db_params = url.parse(process.env.DATABASE_URL);
+if (process.argv.length >= 3) {
+    const db_params = url.parse(process.argv[2]);
     const db_auth = db_params.auth.split(':');
     console.log("Connect with Database_url")
     exports.db = {
