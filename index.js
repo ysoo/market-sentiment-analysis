@@ -1,8 +1,8 @@
 var express = require("express");
 var app = express();
-const reset = require('./server/db/schema.js');
+const dbreset = require('./server/db/schema.js');
 
-reset();
+dbreset.reset();
 
 var PORT = process.env.PORT || 3000
 app.listen(PORT, process.env.IP, function() {
