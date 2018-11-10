@@ -3,6 +3,7 @@ const url = require('url');
 if (process.env.DATABASE_URL) {
     const db_params = url.parse(process.env.DATABASE_URL);
     const db_auth = db_params.auth.split(':');
+    console.log("Connect with Database_url")
     exports.db = {
       user: db_auth[0],
       password: db_auth[1],
