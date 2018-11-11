@@ -10,6 +10,13 @@ db.connect();
 
 var PORT = process.env.PORT || 3000
 
+const alpha = require('alphavantage')({key: '60BR33CT7KNKZ0XS'});
+
+
+alpha.data.quote('GOOGL', 'compact', 'json').then(data => {
+  console.log(data);
+})
+
 
 /* GET home page. */
 app.get('/', async (req, res, next) => {
