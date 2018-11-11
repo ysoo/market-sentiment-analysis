@@ -8,6 +8,7 @@ import  SearchBar from './SearchBar';
 import  NewsFeed  from "./NewsFeed";
 import Chart from './Chart';
 import axios from 'axios';
+import {subscribeToTimer}  from './api';
 
 
 class App extends Component {
@@ -40,7 +41,6 @@ class App extends Component {
             <Grid.Column>
              <StockTable /> 
             </Grid.Column>
-        
           </Grid.Row>
         </Grid>  
       </div>
