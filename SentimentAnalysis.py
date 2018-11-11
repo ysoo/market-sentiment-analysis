@@ -113,7 +113,7 @@ def main():
         # Calculate score 
         # Available to user : tweets["like_count"]
         # Uncomment update score later
-        #updateSentinentToDatabase(conn, r[0], company_score, company_mag, d)
+        updateSentinentToDatabase(conn, r[0], company_score, company_mag, d)
 
 
 if __name__ == '__main__':
