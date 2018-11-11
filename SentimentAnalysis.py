@@ -4,7 +4,6 @@ from google.cloud.language import enums
 from google.cloud.language import types
 import pprint
 import requests
-import psycopg2
 from datetime import datetime
 
 
@@ -47,3 +46,5 @@ def analyzeText(headlines):
 
     print('Text: {}'.format(text))
     print('Sentiment: {}, {}'.format(sentiment.score, sentiment.magnitude))
+
+analyzeText("hello world")
