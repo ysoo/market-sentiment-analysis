@@ -1,26 +1,36 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+import { Grid } from 'semantic-ui-react'
+import 'semantic-ui-css/semantic.min.css';
+// import logo from './logo.svg';
 import './App.css';
+import  StockTable from './StockTable';
+import  SearchBar from './SearchBar';
+import  NewsFeed  from "./NewsFeed";
+import Chart from './Chart';
+
 
 class App extends Component {
+  
+  
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
+        <SearchBar /> 
+          <Grid columns={2}>
+          <Grid.Row>
+            <Grid.Column>
+              <NewsFeed />
+              <Chart />
+            </Grid.Column>
+            <Grid.Column>
+             <StockTable /> 
+            </Grid.Column>
+        
+          </Grid.Row>
+        </Grid>  
       </div>
+
+
     );
   }
 }
