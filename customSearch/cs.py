@@ -16,7 +16,7 @@ def preprocess(pre_data):
 
 def connectToDatabase():
     try:
-        conn = psycopg2.connect(database="secret", user="power_user", password="1234", host="ec2-18-212-49-227.compute-1.amazonaws.com", port="5432")
+        conn = psycopg2.connect(database="secret", user="power_user", password="1234", host="ec2-34-230-43-107.compute-1.amazonaws.com", port="5432")
         return conn
     except:
         print("I am unable to connect to the database")
