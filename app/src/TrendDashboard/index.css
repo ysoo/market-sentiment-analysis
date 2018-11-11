@@ -1,0 +1,31 @@
+.content {
+  height: 100%;
+  width: 100%;
+}
+.background-chart {
+  position: absolute;
+  top: 4em;
+  left: 0;
+  width: 80%;
+  height: 90%;
+  padding: 1em 0em;
+
+}
+
+.card {
+  left: 2em;
+  top: 4em;
+  background-color: #FFF;
+  padding: 1em .5em;
+  z-index: 999;
+  width: 500px;
+  border-radius: 5px;
+  position: absolute;
+}
+
+.animation {
+  position: absolute;
+  left: 80%;
+  bottom: 2em;
+  transform: translateX(-50%)
+}

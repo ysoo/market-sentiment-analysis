@@ -1,3 +1,8 @@
+@font-face {
+  font-family: AvenirNext;
+  src: url('/fonts/AvenirNext/avenir-next-regular.woff') format('woff');
+}
+
 .App {
   text-align: center;
 }
@@ -8,7 +13,7 @@
 }
 
 .App-header {
-  background-color: #282c34;
+  background-color: #1C1E32;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -16,6 +21,7 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+
 }
 
 .App-link {
@@ -33,4 +39,28 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.site-content {
+  padding-top: 90px;
+  height: 100%;
+  flex: 1;
+  width: 100%;
+  display: flex;
+    position: relative
+}
+
+.notificationCard {
+  padding: 1.5em;
+  border-radius: 5px;
+  background-color: white;
+  min-width: 300px;
+  display: flex;
+  align-items: center
+}
+
+.notificationCard-content {
+  font-family: AvenirNext;
+  color: #1C1E32;
+  font-size: 14px;
 }

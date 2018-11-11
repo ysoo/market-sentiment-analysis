@@ -1,0 +1,42 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  left: 0;
+  align-items: center;
+  flex: 0 0 90px;
+  height: 90px;
+  display: flex;
+  justify-content: space-between;
+  z-index: 15;
+  padding: 0.5em 2.5em;
+}
+
+.title {
+    font-family: AvenirNext;
+    font-size: 20;
+    color: #ffffff
+}
+
+.ui.icon.input prompt {
+    padding: 0.5em 1em !important;
+}
+
+.mini {
+    font-family: AvenirNext;
+    font-size: 15;
+    color: #ffffff
+}
+
+.back {
+    height: 30px;
+    width: 30px;
+}
+
+.left-nav-list {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    cursor: pointer;
+}

@@ -6,4 +6,8 @@
   border-radius: 2em;
  }
  
+ .search-bar {
+  height: 60px;
+  width: 300px
+ }
  

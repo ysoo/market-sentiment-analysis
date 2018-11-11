@@ -1,0 +1,16 @@
+.home-content {
+  width: 100%;
+  height: calc(100% - 75px);
+  position: absolute;
+  bottom: 0;
+}
+
+.infocard-content {
+  background-color: white;
+  position: absolute;
+  height: 150px;
+  width: 500px;
+  bottom: 2em;
+  right: 2em;
+  border-radius: 5px;
+}

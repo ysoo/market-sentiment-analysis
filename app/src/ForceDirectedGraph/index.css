@@ -1,0 +1,62 @@
+.links line {
+  stroke: rgba(255, 255, 255, 0.3);
+}
+
+.circle-node {
+  border-radius: 50%;
+  height: 1.5em;
+  width: 1.5em;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 12px;
+  line-height: normal;
+
+}
+
+.chart-container {
+  height: 100%;
+  width: 100%;
+  z-index: 10;
+}
+
+.central {
+  height: 5em;
+  width: 5em;
+  color: rgba(255, 255, 255, 0);
+}
+.group {
+  height: 4em;
+  width: 4em;
+  font-size: 15px;
+}
+
+.redc {
+  background-color: #FF8484;
+}
+
+.bluec {
+  background-color: #5BD8FD;
+}
+
+.greenc {
+  background-color: #18D0BF;
+}
+
+.purplec {
+  background-color: #C178FA;
+}
+
+.yellowc {
+  background-color: #F48A6D;
+}
+
+.info-container {
+  height: 50px;
+  width: 150px;
+  background-color: white;
+  border-radius: 5px;
+}

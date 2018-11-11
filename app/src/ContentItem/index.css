@@ -1,0 +1,28 @@
+.card-content {
+  
+  display: flex;
+  align-items: center;
+  flex: 1;
+}
+
+.circle-label {
+  background-color: aliceblue;
+  width: 30px;
+  height: 30px;
+  border-radius: 25px;
+  font-family: AvenirNext;
+  color: #1C1E32;
+  margin: 0em 1em 0em 0em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+}
+
+.item-content {
+    margin-right: 1.5em;
+    flex: 1;
+    color: #1C1E32;
+    font-family: AvenirNext;
+    font-size: 13px;
+}

@@ -1,0 +1,22 @@
+.company-container {
+  position: absolute;
+  top: 60px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: space-around;
+  flex-flow: row;
+  align-items: 'center';
+}
+
+.title {
+    font-family: AvenirNext;
+    font-size: 20;
+    color: #ffffff
+}
+
+.mini {
+  font-family: AvenirNext;
+  font-size: 15;
+  color: #ffffff
+}

@@ -5,16 +5,20 @@ class Chart extends Component {
         super(props);
         this.state = {
             data : {
-                labels: ["one", "two", "three"], // array of strings
+                labels: ["one", "two", "three","one", "two", "three"], // array of strings
                 datasets: [
                 {
                     label : "Company Name", // name of label
-                    borderColor : '',
+                    borderColor : '#FF8080',
                     backgroundColor : 'rgba(0,0,0,0.0)',
-                    data : [10,20,30], // array of strings
-                },
-                {
                     
+                    data : [4,15, -8,15,30, 9], // array of strings
+                },{
+                    label : "Economy Name", // name of label
+                    borderColor : '#FFED9F',
+                    backgroundColor : 'rgba(0,0,0,0.0)',
+                    
+                    data : [10,5, -7,20,30, 18],
                 }], // array of dicts
             }
         }
@@ -22,15 +26,50 @@ class Chart extends Component {
 
             
       render(){
-        return (<div>
+          let options = {
+              maintainAspectRatio : false,
+              legend: {
+                display: false,
+                position: 'right',
+                labels: {
+                    fontColor: '#FFF',
+                    fontFamily: 'AvenirNext',
+                    fontSize: 13
+                }
+                },
+                responsive: true,
+              scales: {
+                  xAxes: [
+                    {
+                        display: true,
+                        gridLines: {
+                          display: false,
+                          drawBorder: false
+                        },
+                        
+                      }
+                  ],
+                  yAxes: [
+                    {
+                        display: true,
+                        gridLines: {
+                          display: false,
+                          drawBorder: false
+                        }
+                      }
+                  ],
+              },
+              
+            }
+        return (
         <Line 
             data = {this.state.data}
-            options = {{maintainAspectRatio : false}}
-            width = {500}
-            height = {500}
+            options = {options}
+            width={this.props.width}
+            height={this.props.height}
         />
 
-        </div>);
+        );
       }
       
 }
