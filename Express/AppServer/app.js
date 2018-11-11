@@ -10,7 +10,7 @@ var dataRouter = require('./routes/data');
 var app = express();
 var server = require('http').Server(app);
 var io = require('socket.io')(server);
-
+var cors = require('cors');
 
 const port = 3000;
 server.listen(port);
@@ -21,6 +21,7 @@ server.listen(port);
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
 
+app.use(cors());
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));

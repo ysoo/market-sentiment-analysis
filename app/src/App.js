@@ -8,7 +8,7 @@ import  SearchBar from './SearchBar';
 import  NewsFeed  from "./NewsFeed";
 import Chart from './Chart';
 import axios from 'axios';
-import {subscribeToTimer}  from './api';
+
 
 
 class App extends Component {
@@ -22,15 +22,26 @@ class App extends Component {
   }
 
   componentDidMount(){
-    axios.get()
-    .then(res => {
-      const companyData = res.data;
-      this.setState({ companyData });
-    })
+    this.retrieveData();
   }
+
+  getData = async () => {
+    try {
+      return await axios.get('http://localhost:3000/data')
+    } catch (error) {
+      console.error(error)
+    }
+  }
+  
+  retrieveData = async () => {
+    const responseFromServer = await this.getData()
+    console.log(responseFromServer)
+  }
+  
   render() {
     return (
       <div className="App">
+    
         <SearchBar /> 
           <Grid columns={2}>
           <Grid.Row>
