@@ -7,11 +7,26 @@ import  StockTable from './StockTable';
 import  SearchBar from './SearchBar';
 import  NewsFeed  from "./NewsFeed";
 import Chart from './Chart';
+import axios from 'axios';
 
 
 class App extends Component {
   
-  
+  constructor(props){
+    super(props);
+    this.state = {
+      companyData: []
+    }
+    this._var1 = 0;
+  }
+
+  componentDidMount(){
+    axios.get()
+    .then(res => {
+      const companyData = res.data;
+      this.setState({ companyData });
+    })
+  }
   render() {
     return (
       <div className="App">

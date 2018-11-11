@@ -14,7 +14,7 @@ class Chart extends Component {
                     data : [10,20,30], // array of strings
                 },
                 {
-
+                    
                 }], // array of dicts
             }
         }

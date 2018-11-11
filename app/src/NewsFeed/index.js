@@ -4,7 +4,7 @@ import { Feed, Icon } from 'semantic-ui-react'
 import './index.css';
 
 class NewsFeed extends Component {
-  render() {
+  getNews() {
     return (   
         <div>
           <Feed>
@@ -29,6 +29,18 @@ class NewsFeed extends Component {
         </div>
     );
   }
+  render(){
+    return (
+      <div>
+        {this.getNews()}
+        {this.getNews()}
+        {this.getNews()}
+        {this.getNews()}
+        
+    </div>
+    );
+  }
+  
 }
 
 export default NewsFeed;
