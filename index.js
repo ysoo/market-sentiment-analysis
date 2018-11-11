@@ -23,7 +23,7 @@ app.get('/', async (req, res, next) => {
 
 app.get('/getArticles', async (req, res, next) => {
   var aMinuteAgo = new Date( Date.now() - 1000 * 600000 );
-  const art = await articles.getCompanyArticlesAt("Apple Inc.", aMinuteAgo)
+  const art = await articles.getCompanyArticlesWithNameAt("Apple Inc.", aMinuteAgo)
   console.log(art)
   let dict = {
     title: 'Article',
