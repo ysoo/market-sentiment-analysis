@@ -2,7 +2,7 @@ const db = require('./db.js');
 
 exports.reset = function () {
     const query = `
-        DROP TABLE IF EXISTS company_sentinent;
+        DROP TABLE IF EXISTS company_trends;
         DROP TABLE IF EXISTS company_tweets;
         DROP TABLE IF EXISTS company_articles_news;
         DROP TABLE IF EXISTS company;
@@ -20,10 +20,6 @@ exports.reset = function () {
             headline text,
             content text
         );
-        CREATE TABLE IF NOT EXISTS company_sentinent (
-            cid int references company(id),
-            sentinent numeric(8,2) default 0.00
-        );
         CREATE TABLE IF NOT EXISTS company_tweets (
             id serial unique primary key,
             cid int references company(id),
@@ -31,6 +27,19 @@ exports.reset = function () {
             dob date,
             content text,
             like_count bigint
+        );
+        CREATE TABLE IF NOT EXISTS company_trends (
+            id serial unique primary key,
+            cid int references company(id),
+            dob timestamp,
+            score numeric(14,5),
+            magnitude numeric(14,5),
+            score_headline numeric(14,5),
+            magnitude_headline numeric(14,5),
+            score_content numeric(14,5),
+            magnitude_content numeric(14,5),
+            score_tweet numeric(14,5),
+            magnitude_tweet numeric(14,5)
         );
     `
     db.query(query, function (err, result) {
