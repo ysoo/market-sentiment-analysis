@@ -15,7 +15,7 @@ exports.reset = function () {
         CREATE TABLE IF NOT EXISTS company_articles_news (
             id serial unique primary key,
             cid int references company(id),
-            dob date,
+            dob timestamp,
             url text unique,
             headline text,
             content text
@@ -24,9 +24,17 @@ exports.reset = function () {
             id serial unique primary key,
             cid int references company(id),
             username varchar(255),
-            dob date,
+            dob timestamp,
             content text,
-            like_count bigint
+            like_count bigint,
+            tweet_id text unique not nulls
+        );
+        CREATE TABLE IF NOT EXISTS company_trends (
+            id serial unique primary key,
+            cid int references company(id),
+            score numeric(14,5),
+            magnitude numeric(14,5),
+            dob timestamp
         );
         CREATE TABLE IF NOT EXISTS company_trends (
             id serial unique primary key,

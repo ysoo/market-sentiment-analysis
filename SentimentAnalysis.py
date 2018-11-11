@@ -36,6 +36,7 @@ def getCompanyTweets(conn,id, d_t):
     print(rows)
     return rows
 
+<<<<<<< HEAD
 """
    d["scoreHeadline"] = scoreHeadline
         d["magnitudeHeadline"] = magnitudeHeadline
@@ -48,6 +49,12 @@ def updateSentinentToDatabase(conn,id, score, magnitude, data):
     cur = conn.cursor()
     try:
         cur.execute("INSERT INTO company_trends (cid, score, magnitude, dob, score_headline, magnitude_headline, score_content, magnitude_content, score_tweet, magnitude_tweet) VALUES (%s, %s, %s, now(), %s, %s, %s, %s, %s, %s)", (id, score, magnitude, data["scoreHeadline"],data["magnitudeHeadline"],data["scoreContent"], data["magnitudeContent"],data["scoreTweet"], data["magnitudeTweet"]))
+=======
+def updateSentinentToDatabase(conn,id, score, magnitude):
+    cur = conn.cursor()
+    try:
+        cur.execute("INSERT INTO company_trends (cid, score, magnitude, dob) VALUES (%s, %s, %s, now())", (id, score, magnitude))
+>>>>>>> backend-branch
         conn.commit()
     except:
         # duplicated

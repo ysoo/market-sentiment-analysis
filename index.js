@@ -6,6 +6,7 @@ const company = require('./server/models/Company.js');
 const articles = require('./server/models/Articles.js');
 
 db.connect();
+//dbreset.reset()
 
 var PORT = process.env.PORT || 3000
 
