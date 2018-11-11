@@ -30,7 +30,8 @@ exports.reset = function () {
             username varchar(255),
             dob timestamp,
             content text,
-            like_count bigint
+            like_count bigint,
+            tweet_id text unique
         );
     `
     db.query(query, function (err, result) {
