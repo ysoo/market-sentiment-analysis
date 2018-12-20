@@ -1,5 +1,5 @@
 # market-sentiment-analysis for MadHacks 2018
-
+https://devpost.com/software/headlines-w7jrhm
 ## Inspiration
 We noticed that many news articles are somewhat biased. Depending on the sources of news, articles are written in a way where the opinion of the writer is apparent, which in turn affects the opinion of the reader. We also noticed that the public's sentiment towards certain companies affects the stock prices of the company. An instance of this is when Elon Musk tried marijuana on camera, causing Tesla's stock to fall. Hence, we thought that it would be interesting to find out how the public's opinions towards companies would affect their stock's performance.
 
